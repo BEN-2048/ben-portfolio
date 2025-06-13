@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ben Useni | Ingénieur Logiciel</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ajout de la police Inter pour un look moderne et professionnel -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Photo de profil -->
+    <img src="ben.jpg" alt="Photo de profil de Ben Useni" class="profile-pic"/>
+    
+    <!-- Titre principal et sous-titre -->
+    <h1>Ben Useni</h1>
+    <h2>Ingénieur Logiciel</h2>
+
+    <!-- Description simplifiée et en français -->
+    <p class="description">
+      Je suis étudiant en informatique à l’Université Nouveaux Horizons, passionné par le développement de solutions numériques. Je m’intéresse particulièrement au développement full-stack et j’aime transformer des idées en applications utiles et faciles à utiliser. Mon but est de créer des systèmes solides qui répondent aux besoins concrets.
+    </p>
+
+    <!-- Bouton de contact pour révéler la section de contact -->
+    <button id="contactToggle" class="contact-btn">Contactez-moi</button>
+
+    <!-- Section de contact, initialement cachée -->
+    <div id="contactSection" class="contact-section hidden">
+      <div class="contact-links">
+        <a href="https://github.com/BEN-2048" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/benuseni" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:Benuseni@icloud.com">Email</a>
+      </div>
+
+      <!-- Formulaire de contact simple -->
+      <form class="contact-form">
+        <input type="text" placeholder="Votre Nom" required />
+        <input type="email" placeholder="Votre Email" required />
+        <textarea placeholder="Votre Message" rows="4"></textarea>
+        <button type="submit" class="submit-btn">Envoyer</button>
+      </form>
+    </div>
+
+    <!-- Liens de navigation -->
+    <div class="links">
+      <a href="About.html">À Propos de Moi</a>
+    </div>
+  </div>
+
+  <script>
+    // Récupération du bouton de bascule et de la section de contact
+    const toggleButton = document.getElementById('contactToggle');
+    const contactSection = document.getElementById('contactSection');
+
+    // Ajout d'un écouteur d'événements au clic sur le bouton
+    toggleButton.addEventListener('click', () => {
+      // Bascule la classe 'hidden' pour afficher/masquer la section de contact
+      contactSection.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
